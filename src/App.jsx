@@ -1,9 +1,22 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react'
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className=' bg-amber-500 w-[50%] h-[50%] '>
-      <h1 > hello</h1>
+    <div className='App '>
+      <BrowserRouter>
+      <Navbar />
+      <div className="pages max-w-[1400px] p-[20px] mx-auto ">
+        <Routes>
+          <Route 
+            path='/'
+            element={<Home/>}
+            />
+        </Routes>
+      </div>
+      </BrowserRouter>
     </div>
   )
 }
